@@ -1,0 +1,36 @@
+// Include variables
+// -----------------------------------------------------------------------------
+@import 'base/all';
+
+// Include all scss files
+// -----------------------------------------------------------------------------
+@import 'partials/drag-slider';
+@import 'partials/buttons';
+@import 'partials/extends';
+@import 'partials/footer';
+@import 'partials/form';
+@import 'partials/header';
+@import 'partials/icons';
+@import 'partials/images';
+@import 'partials/layout';
+@import 'partials/messages';
+@import 'partials/modals';
+@import 'partials/type';
+
+// Site layout
+// -----------------------------------------------------------------------------
+@import 'sections/charts';
+@import 'sections/dashboard';
+@import 'sections/detail';
+@import 'sections/login';
+@import 'sections/public-profile';
+@import 'sections/register';
+
+// Site Modals
+// -----------------------------------------------------------------------------
+@import 'sections/modals/modal-add-business';
+@import 'sections/modals/modal-add-value';
+@import 'sections/modals/modal-delete-item';
+@import 'sections/modals/modal-detail-month';
+@import 'sections/modals/modal-edit-user';
+@import 'sections/modals/modal-settings';

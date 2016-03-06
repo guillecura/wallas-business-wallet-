@@ -1,0 +1,40 @@
+// Sizes
+// -----------------------------------------------------------------------------
+$border:                     .25rem solid;
+$border-radius:              .5rem;
+$line:                       1px solid;
+$margin:                     .85rem;
+$padding:                    1rem;
+$shadow:                     0 1px 3px 0;
+$shadow-big:                 0 2px 10px 0;
+
+$input-height:               60px;
+$checkbox:                   20px;
+$button-height:              60px;
+$avatar:                     150px;
+$icon:                       24px;
+
+$z-top:                      4000;
+$z-modal:                    5000;
+
+// General
+// -----------------------------------------------------------------------------
+$header-height:              60px;
+$header-logo-height:         50px;
+$footer-height:              60px;
+$desktop-width:              640px;
+$article-width:              1024px;
+
+// Admin
+// -----------------------------------------------------------------------------
+$nav-width:                  80px;
+$nav-avatar:                 40px;
+
+// Special
+// -----------------------------------------------------------------------------
+$full-height:                calc(100vh - (#{$header-height} + #{$footer-height}));
+$adm-full-height:            calc(100vh - #{$header-height});
+
+// Media Queries
+// -----------------------------------------------------------------------------
+$mobile: 'only screen and (max-width: 640px)';

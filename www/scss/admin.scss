@@ -1,0 +1,45 @@
+// Include variables
+// -----------------------------------------------------------------------------
+@import 'base/all';
+
+// Include all scss files
+// -----------------------------------------------------------------------------
+@import 'partials/buttons';
+@import 'partials/drag-slider';
+@import 'partials/extends';
+@import 'partials/form';
+@import 'partials/icons';
+@import 'partials/messages';
+@import 'partials/tinymce';
+@import 'partials/type';
+
+@import 'partials/admin/header';
+@import 'partials/admin/images';
+@import 'partials/admin/layout';
+@import 'partials/admin/modals';
+@import 'partials/admin/nav';
+
+// Admin layout
+// -----------------------------------------------------------------------------
+@import 'sections/admin/business';
+@import 'sections/admin/dashboard';
+@import 'sections/admin/detail';
+@import 'sections/admin/feedback';
+@import 'sections/admin/landingpage';
+@import 'sections/admin/settings';
+@import 'sections/admin/type';
+@import 'sections/admin/user';
+@import 'sections/admin/users';
+@import 'sections/landingpage';
+
+// Site Modals
+// -----------------------------------------------------------------------------
+@import 'sections/modals/modal-add-business';
+@import 'sections/modals/modal-add-value';
+@import 'sections/modals/modal-delete-item';
+@import 'sections/modals/modal-detail-month';
+@import 'sections/modals/modal-edit-user';
+@import 'sections/modals/modal-settings';
+
+@import 'sections/admin/modals/edit-landingpage';
+@import 'sections/admin/modals/modal-add-user';

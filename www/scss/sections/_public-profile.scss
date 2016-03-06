@@ -1,0 +1,205 @@
+// Public User Profile
+// -----------------------------------------------------------------------------
+.section-public-profile {
+// User Profile
+// -----------------------------------------------------------------------------
+  .user-profile {
+    display: flex;
+    padding: $padding * 2;
+
+    > div {
+      width: 100%;
+    }
+  }
+
+// User Avatar -----------------------------------------------------------------
+  .avatar {
+    max-width: $avatar;
+    text-align: center;
+
+    @media #{$mobile} {
+      max-width: $avatar * .66;
+    }
+
+    + .info {
+      padding-left: $padding;
+    }
+  }
+
+// User Info -------------------------------------------------------------------
+  .info {
+    text-align: left;
+
+    > span {
+      display: block;
+    }
+// User Name
+    .u-name {
+      font-size: $font-size-big;
+      line-height: $avatar / 2;
+
+      @media #{$mobile} {
+        line-height: ($avatar / 2) * .66;
+      }
+    }
+// User Email
+    .u-email {
+      font-style: italic;
+      font-weight: $light;
+    }
+  }
+
+  .u-nav {
+    border: $line $smoke-dark;
+    border-radius: $border-radius;
+    display: flex;
+
+    li {
+      text-align: center;
+      width: 100%;
+
+      + li {
+        border-left: $line $smoke-dark;
+      }
+    }
+
+    a,
+    span:not(.num) {
+      color: $gray-light;
+      display: block;
+      height: $icon * 2;
+      padding: $icon / 2 0;
+      position: relative;
+// Notification Icon
+      .num {
+        border: $line $gray-light;
+        border-radius: 9px;
+        color: $gray-light;
+        display: inline-block;
+        font-size: $font-size-tiny;
+        font-weight: $regular;
+        height: 18px;
+        line-height: 18px;
+        position: absolute;
+        text-align: center;
+        vertical-align: top;
+        width: 18px;
+      }
+    }
+  }
+
+// User Business
+// -----------------------------------------------------------------------------
+  .user-business {
+    padding: $padding * 2;
+    padding-top: 0;
+// Business Item
+    > ul > li {
+      background-color: $primary-dark;
+      border-radius: $border-radius;
+      color: $white;
+      margin-bottom: $margin;
+
+      > div:not(.more-info) {
+        display: flex;
+        padding: $padding;
+      }
+
+      .more-info {
+        display: flex;
+        height: 0;
+        overflow: hidden;
+        padding: 0 $padding;
+        text-align: left;
+        transition: all 150ms ease-out;
+        width: 100%;
+
+        .actions {
+          align-self: flex-end;
+          border: $line $white;
+          border-radius: $border-radius;
+          display: flex;
+          max-height: $icon * 2;
+          width: 40%;
+
+          li {
+            text-align: center;
+            width: 100%;
+
+            + li {
+              border-left: $line $white;
+            }
+          }
+
+          span {
+            color: $white;
+            display: block;
+            height: $icon * 2;
+            padding: $icon / 2 0;
+          }
+        }
+
+        .b-info > span {
+          display: block;
+          font-size: $font-size;
+          font-weight: $light;
+          line-height: $line-height;
+        }
+      }
+
+      &.active .more-info {
+        height: auto;
+        padding: $padding;
+      }
+    }
+  }
+// Business Logo
+  .logo {
+    max-width: $avatar;
+    text-align: center;
+    width: 100%;
+
+    @media #{$mobile} {
+      max-width: $avatar * .66;
+    }
+
+    .b-image {
+      height: $avatar / 1.5;
+      width: $avatar / 1.5;
+
+      @media #{$mobile} {
+        height: ($avatar / 1.5) * .66;
+        width: ($avatar / 1.5) * .66;
+      }
+    }
+
+    + .basic-info {
+      padding-left: $padding;
+    }
+  }
+
+  .basic-info {
+    width: 100%;
+
+    > span {
+      display: block;
+      line-height: $avatar / 3;
+
+      @media #{$mobile} {
+        line-height: ($avatar / 3) * .66;
+      }
+    }
+
+    .b-name {
+      font-size: $font-size-big;
+    }
+
+    .b-rut {
+      font-size: $font-size-small;
+      font-weight: $light;
+      letter-spacing: .25em;
+    }
+  }
+}
+
+@import 'partials/edit-business';

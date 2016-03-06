@@ -1,0 +1,38 @@
+// Import the Fonts
+// -----------------------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Lato:400,300,700,400italic,700italic,300italic');
+
+@font-face {
+  font-family: 'streamline';
+  src: url('../fonts/streamline-30px.eot');
+  src: url('../fonts/streamline-30px.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/streamline-30px.woff') format('woff'),
+       url('../fonts/streamline-30px.ttf')  format('truetype'),
+       url('../fonts/streamline-30px.svg#f17e84668ea48ed3783a53df6475f030') format('svg');
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+// Font Size
+// -----------------------------------------------------------------------------
+$default-rem:                16px;
+$font-size:                  1rem;
+$line-height:                1.48em;
+
+$font-size-giant:            3.5rem;
+$font-size-big:              2rem;
+$font-size-medium:           1.5rem;
+$font-size-small:            .85rem;
+$font-size-tiny:             .65rem;
+
+// Font Weights
+// -----------------------------------------------------------------------------
+$light:                      300;
+$regular:                    400;
+$bold:                       700;
+
+// Fonts Stack
+// -----------------------------------------------------------------------------
+$sans-stack:                 'Lato', Arial, sans-serif;
+$icon-stack:                 'streamline';

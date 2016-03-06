@@ -1,0 +1,59 @@
+// Dashboard
+// -----------------------------------------------------------------------------
+.section-admin-dashboard {
+  > article {
+    &:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    &:last-of-type {
+      background-color: $smoke-light;
+    }
+
+    > div {
+      @extend %inline-block;
+      margin-bottom: $margin * 2;
+      margin-top: $margin * 2;
+      text-align: center;
+      width: 33.33%;
+
+      i {
+        @extend %icon-big;
+      }
+
+      span {
+        font-size: $font-size-giant;
+        font-weight: $bold;
+        margin-left: $margin;
+      }
+
+      p {
+        font-size: $font-size-small;
+      }
+    }
+
+    h2 {
+      margin-bottom: $margin;
+    }
+
+    ul {
+      display: block;
+      margin-top: $margin * 2;
+
+      > li {
+        @extend %inline-block;;
+        width: 33.33%;
+
+        a,
+        h3 {
+          display: block;
+        }
+
+        h3 {
+          margin-bottom: $margin / 2;
+        }
+      }
+    }
+  }
+}

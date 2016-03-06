@@ -1,0 +1,25 @@
+// Colors
+// scss-lint:disable ColorVariable
+// -----------------------------------------------------------------------------
+$black:                      rgb(0, 0, 0);
+$white:                      rgb(255, 255, 255);
+
+$gray:                       rgb(50, 50, 50);
+$gray-light:                 lighten($gray, 10%);
+$gray-dark:                  darken($gray, 10%);
+
+$smoke:                      rgb(240, 240, 240);
+$smoke-light:                lighten($smoke, 2.5%);
+$smoke-dark:                 darken($smoke, 10%);
+
+$primary:                    rgb(0, 169, 157);
+$primary-light:              rgb(34, 181, 115);
+$primary-dark:               rgb(61, 81, 89);
+
+$secondary:                  rgb(255, 131, 77);
+$secondary-light:            rgb(230, 150, 117);
+
+// Specific Colors
+// -----------------------------------------------------------------------------
+$copy-color:                 $primary-dark;
+$background:                 $white;

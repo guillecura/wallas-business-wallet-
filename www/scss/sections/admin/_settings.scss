@@ -1,0 +1,117 @@
+// Settings
+// -----------------------------------------------------------------------------
+.section-admin-user-settings {
+  h3 {
+    margin: $margin 0;
+  }
+
+  input {
+    font-size: $font-size;
+    margin-bottom: $margin;
+    width: 100%;
+  }
+// Basic settings
+// -----------------------------------------------------------------------------
+  .edit-admin-form {
+    text-align: left;
+
+    > form > div {
+      display: block;
+      padding: $padding;
+      width: 100%;
+    }
+  // Business Logo
+    .logo {
+      @extend %inline-block;
+      border-radius: 50%;
+      cursor: pointer;
+      height: $avatar * 1.5;
+      padding: 0;
+      position: relative;
+      text-align: center;
+      width: $avatar * 1.5;
+
+      &::-webkit-file-upload-button {
+        @include vertical-center;
+        appearance: none;
+        background: transparent;
+        border: 0;
+        color: $black;
+        cursor: pointer;
+        font-size: $font-size-small;
+        text-align: center;
+        white-space: normal;
+        width: $avatar * 1.5;
+      }
+
+      + .basic-info {
+        padding-left: $padding;
+      }
+    }
+
+    .basic-info {
+      @extend %inline-block;
+      margin-left: $margin;
+      text-align: left;
+      width: calc(100% - #{$avatar * 2} + #{$margin * 2});
+    }
+
+    .actions {
+      background-color: $primary;
+      border-radius: $border-radius;
+      display: inline-block;
+      height: $button-height;
+      left: 50%;
+      margin: $margin auto;
+      max-height: $icon * 2;
+      position: relative;
+      text-align: center;
+      transform: translateX(-50%);
+      width: 200px;
+
+      > * {
+        vertical-align: middle;
+      }
+
+      i {
+        color: $white;
+        margin: $icon / 2 0;
+      }
+
+      button {
+        background: transparent;
+        height: auto;
+        line-height: $icon * 2;
+      }
+    }
+  }
+// General Settings
+// -----------------------------------------------------------------------------
+  article > div {
+    background-color: $smoke-light;
+    border-radius: $border-radius;
+    margin-top: $margin;
+    padding: $padding $padding * 2;
+
+    > div,
+    > form {
+      @extend %inline-block;
+      margin-bottom: $margin;
+      padding-bottom: $padding;
+      text-align: left;
+
+      button {
+        margin: $margin auto;
+      }
+    }
+
+    > div {
+      margin-left: $margin * 2;
+      width: calc(25% - #{$margin});
+    }
+
+    > form {
+      width: calc(75% - #{$margin});
+    }
+  }
+}

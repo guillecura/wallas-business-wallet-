@@ -1,0 +1,25 @@
+// Define basic images styling
+// -----------------------------------------------------------------------------
+
+div {
+  &[class*='-image'] {
+    background-color: $smoke-light;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    height: $avatar;
+    width: $avatar;
+
+    @media #{$mobile} {
+      height: $avatar * .66;
+      width: $avatar * .66;
+    }
+
+    > img {
+      height: 0;
+      width: 0;
+    }
+  }
+}

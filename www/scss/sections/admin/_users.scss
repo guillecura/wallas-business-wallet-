@@ -1,0 +1,118 @@
+// Admin Users
+// -----------------------------------------------------------------------------
+.section-admin-users {
+  > article {
+    position: relative;
+
+    > span[tabindex='0'] {
+      font-size: $font-size-small;
+    }
+  }
+
+  .users-search {
+    position: absolute;
+    right: $padding * 2;
+    top: $padding;
+
+    > * {
+      @extend %inline-block;
+    }
+
+    input {
+      padding-right: $input-height;
+      width: 100%;
+    }
+
+    button {
+      background-color: transparent;
+      border: 0;
+      border-radius: 0;
+      color: $gray;
+      cursor: pointer;
+      font-size: $font-size;
+      height: $input-height;
+      min-width: $input-height;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      text-transform: none;
+      top: 0;
+
+      > [class*='icon'],
+      > [class*='icon']::after {
+        height: $input-height;
+        line-height: $input-height;
+      }
+    }
+
+    a {
+      color: $smoke-dark;
+      display: block;
+      margin-top: $margin;
+      text-align: right;
+    }
+  }
+
+  .table {
+    display: block;
+    margin-top: $margin * 2;
+    width: 100%;
+
+    > div {
+      @extend %inline-block;
+      padding: $padding;
+      position: relative;
+      width: 33.33%;
+
+      a {
+        bottom: 0;
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+      }
+
+      > div {
+        @extend %inline-block;
+
+        + div {
+          margin-left: $margin;
+        }
+      }
+
+      span {
+        display: block;
+      }
+
+      .u-image {
+        height: $nav-avatar * 2;
+        width: $nav-avatar * 2;
+      }
+
+      .author {
+        font-size: $font-size-tiny;
+        font-weight: $bold;
+        margin: $margin / 2 0;
+        text-transform: uppercase;
+      }
+
+      i[class*='icon-'] {
+        height: $icon * .66;
+        width: $icon * .66;
+
+        &::after {
+          font-size: $icon * .66;
+          line-height: $icon * .66;
+        }
+
+        ~ b {
+          font-size: $font-size;
+          font-weight: $bold;
+        }
+      }
+    }
+  }
+}

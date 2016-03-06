@@ -1,0 +1,16 @@
+// Modals Add Value
+// -----------------------------------------------------------------------------
+.delete-business-form {
+  text-align: center;
+
+  > * {
+    display: block;
+    width: 100%;
+  }
+
+  button {
+    display: inline-block;
+    margin: $margin 0;
+    width: auto;
+  }
+}

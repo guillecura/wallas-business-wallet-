@@ -1,0 +1,21 @@
+// Modals Add Value
+// -----------------------------------------------------------------------------
+.add-value-form {
+  text-align: center;
+
+  > * {
+    display: block;
+    width: 100%;
+  }
+
+  input,
+  textarea,
+  button {
+    margin: $margin 0;
+  }
+
+  button {
+    display: inline-block;
+    width: auto;
+  }
+}

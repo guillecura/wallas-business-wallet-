@@ -1,0 +1,66 @@
+// Main styles
+::selection {
+  background-color: rgba($primary, .75);
+  color: $white;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background-color: $background;
+  color: $copy-color;
+  padding-bottom: $footer-height;
+  padding-top: $header-height;
+
+  &.modal-is-open {
+    overflow: hidden;
+
+    > header,
+    > section,
+    > nav {
+      filter: blur(10px);
+      overflow: hidden;
+      pointer-events: none;
+    }
+  }
+}
+
+section {
+  background-color: $white;
+  min-height: $full-height;
+  overflow-x: hidden;
+  padding: $padding $padding $padding $nav-width;
+  width: 100vw;
+}
+
+article {
+  border-radius: $border-radius;
+  display: block;
+  margin: $margin * 2 auto;
+  max-width: $article-width;
+  padding: $padding * 2 $padding;
+  text-align: left;
+
+  &.box {
+    padding: $padding * 2 $padding * 4;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+span {
+  &[tabindex='0'] {
+    cursor: pointer;
+  }
+}

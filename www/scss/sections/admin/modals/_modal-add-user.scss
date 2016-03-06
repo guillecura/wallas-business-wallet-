@@ -1,0 +1,55 @@
+.register-form {
+  padding: $padding * 2;
+
+  input {
+    display: block;
+    margin: $margin auto;
+    min-width: 300px;
+    width: 50%;
+  }
+
+  .logo {
+    border-radius: 50%;
+    cursor: pointer;
+    height: $avatar;
+    margin: 0 auto;
+    margin-bottom: $margin;
+    min-width: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: $avatar;
+
+    @media #{$mobile} {
+      height: $avatar * .66;
+      width: $avatar * .66;
+    }
+
+    &::-webkit-file-upload-button {
+      @include vertical-center;
+      appearance: none;
+      background: transparent;
+      border: 0;
+      color: $black;
+      cursor: pointer;
+      font-size: $font-size-small;
+      text-align: center;
+      white-space: normal;
+      width: $avatar;
+
+      @media #{$mobile} {
+        width: $avatar * .66;
+      }
+    }
+  }
+
+  button {
+    margin: $margin 0;
+  }
+
+  a {
+    color: $smoke-dark;
+    display: block;
+    margin: $margin 0 0 0;
+  }
+}

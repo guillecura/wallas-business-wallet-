@@ -1,0 +1,37 @@
+// Modal Settings
+// -----------------------------------------------------------------------------
+.change-password-form,
+.logout-form,
+.delete-account-form {
+  border-bottom: $line $smoke;
+  display: block;
+  margin-bottom: $margin;
+  padding-bottom: $padding;
+  text-align: left;
+  width: 80%;
+  @media #{$mobile} {
+    width: 100%;
+  }
+
+  h6 {
+    margin-bottom: $margin;
+  }
+}
+
+.change-password-form {
+  input {
+    display: block;
+    margin-bottom: $margin;
+    width: 100%;
+
+    &:last-of-type {
+      display: inline-block;
+      margin-right: $margin;
+      width: calc(100% - 140px);
+    }
+  }
+}
+
+.delete-account-form {
+  border-bottom: 0;
+}

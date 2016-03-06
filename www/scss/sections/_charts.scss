@@ -1,0 +1,98 @@
+// Dashboard
+// -----------------------------------------------------------------------------
+.section-charts {
+  .chart-list {
+    padding: $padding * 2;
+
+    li:not(.label) {
+      border: $line $smoke-dark;
+      border-radius: $border-radius;
+      padding: $padding $padding * 2;
+
+      + li:not(.label) {
+        margin: $margin 0;
+      }
+    }
+
+    .c-title {
+      display: block;
+      font-size: $font-size-big;
+      font-weight: $bold;
+      position: relative;
+      text-transform: uppercase;
+
+      > span {
+        display: block;
+        font-size: $font-size-tiny;
+      }
+    }
+
+    .chart-labels {
+      text-align: center;
+    }
+
+    .label {
+      display: inline-block;
+      margin-right: $margin;
+      padding: $padding;
+
+      .icon-label {
+        margin-right: $margin;
+        vertical-align: middle;
+      }
+
+      span {
+        vertical-align: middle;
+      }
+    }
+
+    .set-floyd .icon-label {
+      background-color: $primary;
+    }
+
+    .set-total .icon-label {
+      background-color: $smoke-dark;
+    }
+  }
+}
+
+.graph {
+  .point {
+    stroke: $white;
+    stroke-width: 2;
+
+    &.set-total {
+      fill: $smoke-dark;
+    }
+
+    &.set-floyd {
+      fill: $primary;
+    }
+
+    &.set-taxes {
+      fill: $smoke;
+    }
+  }
+
+  .surface {
+    fill: none;
+    stroke-width: 2;
+
+    &.set-total {
+      stroke: $smoke-dark;
+    }
+
+    &.set-floyd {
+      stroke: $primary;
+    }
+  }
+
+  .label {
+    font-family: $sans-stack;
+    font-size: $font-size-tiny;
+
+    &.x-label {
+      text-anchor: middle;
+    }
+  }
+}

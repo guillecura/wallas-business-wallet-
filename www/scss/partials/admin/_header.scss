@@ -1,0 +1,133 @@
+// Header
+// -----------------------------------------------------------------------------
+header {
+  background-color: $white;
+  border-bottom: $line $smoke-light;
+  display: block;
+  height: $header-height;
+  padding: 0 $padding;
+  position: fixed;
+  text-align: left;
+  top: 0;
+  width: 100vw;
+  z-index: $z-top;
+
+  .wallas-logo {
+    height: $header-logo-height;
+    margin-top: ($header-height - $header-logo-height) / 2;
+  }
+
+  .header-logo > span {
+    color: $primary-dark;
+    display: inline-block;
+    font-size: $font-size-small;
+    font-style: italic;
+    line-height: $header-height / 6;
+    margin-bottom: $header-height / 4;
+    margin-left: -$margin / 2.5;
+    vertical-align: bottom;
+  }
+
+// User menu
+// -----------------------------------------------------------------------------
+  menu {
+    cursor: pointer;
+    display: block;
+    height: $header-height;
+    position: absolute;
+    right: $padding;
+    top: 0;
+    z-index: $z-top + 2;
+
+    > * {
+      display: inline-block;
+      margin-left: $margin;
+      vertical-align: middle;
+    }
+
+    > span {
+      line-height: $header-height;
+    }
+
+    .u-image {
+      border: $line $primary-dark;
+    }
+  }
+}
+
+// Logo
+// -----------------------------------------------------------------------------
+.wallas-logo {
+  path {
+    fill: $primary-dark;
+  }
+}
+
+// User actions
+// -----------------------------------------------------------------------------
+.user-actions {
+  background-color: $primary-dark;
+  box-shadow: $shadow-big $smoke-dark;
+  cursor: auto;
+  display: block;
+  padding: $padding $padding * 2;
+  position: absolute;
+  right: 0;
+  top: $header-height;
+  width: $header-height * 3;
+
+  // Picker
+  &::before {
+    border: 10px solid transparent;
+    border-bottom: 10px solid $primary-dark;
+    content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    right: 10px;
+    top: -20px;
+    width: 0;
+  }
+
+  a {
+    color: $white;
+    display: block;
+    font-size: $font-size-small;
+    margin-bottom: $margin;
+    text-transform: uppercase;
+    transition: color 100ms;
+
+    &:hover {
+      color: $smoke-dark;
+    }
+
+    &.logout {
+      color: rgba($white, .33);
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    > * {
+      vertical-align: top;
+    }
+
+    > span {
+      display: inline-block;
+      line-height: $icon;
+      margin-left: $margin;
+    }
+  }
+
+  > li > span {
+    color: rgba($white, .33);
+    display: block;
+    font-size: $font-size-tiny;
+    font-weight: $regular;
+    margin-top: $margin;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+}

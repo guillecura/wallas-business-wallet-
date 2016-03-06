@@ -1,0 +1,19 @@
+// Admin Feedbak
+// -----------------------------------------------------------------------------
+.section-admin-feedback {
+  form {
+    > .mce-container.mce-panel {
+      margin: $margin * 2 0;
+    }
+  }
+
+  .actions {
+    display: block;
+    text-align: center;
+
+    > * {
+      display: inline-block;
+      margin: 0 $margin;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+// Login
+// -----------------------------------------------------------------------------
+.section-login {
+  padding: $padding;
+  position: relative;
+  text-align: center;
+
+  .wallas-logo {
+    height: $avatar * 2;
+    width: $avatar * 2;
+
+    @media #{$mobile} {
+      height: $avatar * .66;
+    }
+  }
+
+  .login-form {
+    left: 50%;
+    padding: $padding * 2;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    input {
+      display: block;
+      margin: $margin 0;
+      min-width: 300px;
+      width: 50%;
+    }
+
+    button {
+      margin: $margin 0;
+    }
+
+    a {
+      color: $smoke-dark;
+      display: block;
+      margin: $margin 0 0 0;
+    }
+  }
+}

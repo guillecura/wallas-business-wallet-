@@ -1,0 +1,161 @@
+// Modals Detail Month
+// -----------------------------------------------------------------------------
+// Single Item
+.modal-window .single-month-item-modal {
+  position: relative;
+
+  > div {
+    display: flex;
+  }
+
+// Month name
+  .s-month {
+    color: $gray-light;
+    display: block;
+    font-size: $font-size-big;
+    font-weight: $bold;
+    position: relative;
+    text-transform: uppercase;
+  }
+// Average
+  .s-avg {
+    span {
+      background-color: $smoke-dark;
+      border-radius: 50%;
+      color: $white;
+      display: inline-block;
+      font-size: $font-size-medium;
+      font-weight: $regular;
+      height: $avatar / 1.5;
+      line-height: $avatar / 1.5;
+      margin: $margin 0;
+      text-align: center;
+      width: $avatar / 1.5;
+    }
+
+    &.color-1 span{
+      background-color: $primary-light;
+    }
+
+    &.color-2 span{
+      background-color: $primary;
+    }
+
+    &.color-3 span{
+      background-color: $secondary-light;
+    }
+
+    &.color-4 span{
+      background-color: $secondary;
+    }
+
+    + .s-taxes {
+      margin-top: $margin;
+    }
+  }
+
+  .s-taxes {
+    text-align: right;
+    width: 100%;
+
+    h6 {
+      color: $gray-light;
+      display: block;
+      text-align: right;
+
+      span {
+        font-size: $font-size;
+        font-weight: $bold;
+      }
+    }
+
+    .s-floyd {
+      font-weight: $regular;
+      line-height: $icon;
+      margin: $margin 0;
+
+      i {
+        margin: 0 $margin;
+        vertical-align: bottom;
+      }
+    }
+  }
+
+  .s-income {
+    border-top: $line $smoke-dark;
+    display: block;
+    margin-top: $margin;
+    padding-top: $margin;
+    text-align: center;
+
+    .s-in,
+    .s-de {
+      color: $gray-light;
+      font-size: $font-size-small;
+      margin-bottom: $margin;
+      text-align: left;
+
+      span {
+        float: right;
+        margin: 0;
+        text-align: right;
+      }
+
+      input {
+        float: right;
+        margin-left: $margin;
+      }
+    }
+
+    .s-ed {
+      margin-bottom: $margin;
+      width: 100%;
+
+      > input {
+        @extend %inline-block;
+        height: $input-height * .66;
+        line-height: $input-height * .66;
+        padding: 0 $padding / 2;
+        width: calc(33.33% - #{$margin});
+
+        + input {
+          margin-left: $margin;
+        }
+
+        &[id='value'] {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  button,
+  .button {
+    display: inline-block;
+    margin: $margin;
+  }
+
+  .u-nav {
+    border: $line $smoke-dark;
+    border-radius: $border-radius;
+    display: flex;
+    margin-top: $margin * 2;
+
+    li {
+      text-align: center;
+      width: 100%;
+
+      + li {
+        border-left: $line $smoke-dark;
+      }
+    }
+
+    span {
+      color: $gray-light;
+      display: block;
+      height: $icon * 2;
+      padding: $icon / 2 0;
+      position: relative;
+    }
+  }
+}

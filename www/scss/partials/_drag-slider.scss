@@ -1,0 +1,92 @@
+// Summary slide item
+// -----------------------------------------------------------------------------
+.b-summary {
+  $actions-width: 100%;
+
+  color: $white;
+  display: block;
+  padding: $padding * 2;
+  position: relative;
+  width: 100%;
+
+  .dragdealer {
+    background: none;
+    border-radius: 0;
+    bottom: 0;
+    height: auto;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .handle {
+    border-radius: 0;
+    height: 100%;
+    position: relative;
+    width: calc(100% + #{$actions-width});
+
+    > article {
+      display: block;
+      height: 100%;
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  .disabled {
+    background: none;
+  }
+
+  .slide-content {
+    left: $padding * 2;
+    position: absolute;
+    top: $padding * 2;
+  }
+
+  .slide-actions {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: $actions-width / 2;
+
+    > * {
+      cursor: pointer;
+      position: relative;
+      text-align: center;
+    }
+
+    .edit {
+      background-color: $smoke-dark;
+      width: $actions-width / 4;
+    }
+
+    .detail {
+      background-color: $primary;
+      width: $actions-width / 4;
+    }
+
+    .helper {
+      background-color: $primary;
+      width: $actions-width / 2;
+
+      &::after {
+        background-color: $primary;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        right: -$actions-width;
+        width: $actions-width;
+      }
+    }
+
+    i {
+      @include vertical-center;
+      left: 0;
+      width: 100%;
+    }
+  }
+}

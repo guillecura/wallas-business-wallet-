@@ -1,0 +1,90 @@
+// Dashboard
+// -----------------------------------------------------------------------------
+.section-admin-business {
+  > article {
+    position: relative;
+
+    > span[tabindex='0'] {
+      font-size: $font-size-small;
+    }
+  }
+
+  .business-search {
+    position: absolute;
+    right: $padding * 2;
+    top: $padding;
+
+    > * {
+      @extend %inline-block;
+    }
+
+    input {
+      padding-right: $input-height;
+      width: 100%;
+    }
+
+    button {
+      background-color: transparent;
+      border: 0;
+      border-radius: 0;
+      color: $gray;
+      cursor: pointer;
+      font-size: $font-size;
+      height: $input-height;
+      min-width: $input-height;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      text-transform: none;
+      top: 0;
+
+      > [class*='icon'],
+      > [class*='icon']::after {
+        height: $input-height;
+        line-height: $input-height;
+      }
+    }
+
+    a {
+      color: $smoke-dark;
+      display: block;
+      margin-top: $margin;
+      text-align: right;
+    }
+  }
+
+  .table {
+    display: table;
+    margin-top: $margin * 2;
+    width: 100%;
+
+    > * {
+      display: table-row;
+      height: calc(#{$nav-avatar} + #{$margin});
+
+      &:nth-child(even) {
+        background-color: $smoke-light;
+      }
+
+      > * {
+        display: table-cell;
+        padding: 0 $padding / 2;
+        vertical-align: top;
+
+        * {
+          font-size: $font-size-small;
+          line-height: calc(#{$nav-avatar} + #{$margin});
+        }
+
+        .b-image {
+          margin: $margin / 2 auto 0;
+        }
+      }
+    }
+
+    > .heading * {
+      font-weight: $bold;
+      text-transform: uppercase;
+    }
+  }
+}

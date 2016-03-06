@@ -1,0 +1,139 @@
+// Edit User
+// -----------------------------------------------------------------------------
+.edit-user-form {
+  text-align: center;
+
+  > form > div {
+    display: flex;
+    padding: $padding;
+    width: 100%;
+  }
+// Business Logo
+  .logo {
+    border-radius: 50%;
+    cursor: pointer;
+    height: $avatar;
+    margin-bottom: $margin;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: $avatar;
+
+    @media #{$mobile} {
+      height: $avatar * .66;
+      width: $avatar * .66;
+    }
+
+    &::-webkit-file-upload-button {
+      @include vertical-center;
+      appearance: none;
+      background: transparent;
+      border: 0;
+      color: $black;
+      cursor: pointer;
+      font-size: $font-size-small;
+      text-align: center;
+      white-space: normal;
+      width: $avatar;
+
+      @media #{$mobile} {
+        width: $avatar * .66;
+      }
+    }
+
+    + .basic-info {
+      padding-left: $padding;
+    }
+  }
+
+  .basic-info {
+    text-align: left;
+    width: 100%;
+
+    > input {
+      width: 100%;
+    }
+
+    .u-name {
+      @extend %inline-block;
+      font-size: $font-size-big;
+      margin-bottom: $margin;
+      width: calc(50% - #{$margin / 2});
+
+      @media #{$mobile} {
+        width: 100%;
+      }
+
+      + .u-name {
+        margin-left: $margin;
+
+        @media #{$mobile} {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .u-email {
+      font-size: $font-size-small;
+      font-weight: $light;
+    }
+  }
+
+  .info {
+    padding: $padding;
+
+    > label {
+      display: flex;
+      width: 100%;
+
+      + label {
+        margin-top: $margin;
+      }
+
+      span {
+        line-height: 40px;
+        padding: 0 $padding;
+        width: $avatar;
+
+        @media #{$mobile} {
+          width: $avatar * .66;
+        }
+      }
+
+      input {
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+      }
+    }
+  }
+
+  .actions {
+    background-color: $primary;
+    border-radius: $border-radius;
+    display: inline-block;
+    margin: $margin auto;
+    max-height: $icon * 2;
+    text-align: center;
+    width: 40%;
+
+    @media #{$mobile} {
+      width: 80%;
+    }
+
+    > * {
+      vertical-align: middle;
+    }
+
+    i {
+      color: $white;
+      margin: $icon / 2 0;
+    }
+
+    button {
+      background: transparent;
+      height: auto;
+      line-height: $icon * 2;
+    }
+  }
+}

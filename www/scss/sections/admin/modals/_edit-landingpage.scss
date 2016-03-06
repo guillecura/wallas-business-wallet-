@@ -1,0 +1,45 @@
+// Edit landingpage modals
+// -----------------------------------------------------------------------------
+.admin-change-cover {
+  .image {
+    border: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 80%;
+
+    &::before {
+      background-color: $white;
+      border: $line $smoke-dark;
+      border-radius: $border-radius;
+      content: 'Select new cover image';
+      cursor: pointer;
+      display: inline-block;
+      font-size: $font-size;
+      height: $input-height;
+      outline: none;
+      text-align: center;
+      user-select: none;
+      white-space: nowrap;
+      width: calc(100% - 2px);
+    }
+
+    &::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+  }
+}
+
+.admin-change-abstract {
+  .mce-container.mce-panel {
+    margin: $margin 0;
+  }
+
+  textarea {
+    display: block;
+    min-height: $input-height * 3;
+    margin: $margin * 2 0;
+    resize: vertical;
+    width: 100%;
+  }
+}

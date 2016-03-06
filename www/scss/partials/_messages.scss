@@ -1,0 +1,17 @@
+// Messages
+// -----------------------------------------------------------------------------
+.message {
+  color: $secondary;
+  display: block;
+  height: $header-height;
+  pointer-events: none;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100vw;
+  z-index: $z-top + 1;
+
+  > * {
+    line-height: $header-height;
+  }
+}

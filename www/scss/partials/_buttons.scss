@@ -1,0 +1,31 @@
+// Forms
+// -----------------------------------------------------------------------------
+button,
+.button {
+  background-color: $primary;
+  border: 0;
+  border-radius: $border-radius;
+  color: $white;
+  cursor: pointer;
+  font-size: $font-size;
+  height: $button-height;
+  line-height: $button-height;
+  min-width: $button-height * 2;
+  padding: 0 $padding;
+  text-transform: uppercase;
+
+  @media #{$mobile} {
+    height: $button-height * .66;
+    line-height: $button-height * .66;
+    min-width: ($button-height * 2) * .66;
+  }
+
+  &.alert {
+    background-color: $secondary;
+  }
+
+  &:focus {
+    background-color: darken($primary, 5%);
+    outline: 0;
+  }
+}

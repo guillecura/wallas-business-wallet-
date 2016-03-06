@@ -1,0 +1,55 @@
+// Landing page management
+// -----------------------------------------------------------------------------
+.preview-landing {
+  > section,
+  > article {
+    position: relative;
+
+    &:hover {
+      > *:not(.overlay) {
+        filter: blur(2px);
+      }
+
+      .overlay {
+        opacity: 1;
+      }
+    }
+
+    .overlay {
+      background-color: rgba($primary-dark, .75);
+      bottom: 0;
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: opacity 250ms ease-out;
+      width: 100%;
+      z-index: 1;
+
+      &::after {
+        border: $line $white;
+        border-radius: $border-radius;
+        bottom: $padding;
+        content: '';
+        display: block;
+        height: calc(100% - #{$padding * 2});
+        left: $padding;
+        position: absolute;
+        right: $padding;
+        top: $padding;
+        transition: opacity 250ms ease-out;
+        width: calc(100% - #{$padding * 2});
+        z-index: 2;
+      }
+
+      .button {
+        @include center-center;
+        display: inline-block;
+        z-index: 3;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+// Type rules
+// -----------------------------------------------------------------------------
+
+html {
+  font-size: $default-rem;
+
+  @media #{$mobile} {
+    font-size: $default-rem * .666;
+  }
+}
+
+body {
+  font-family: $sans-stack;
+}
+
+h6 {
+  font-size: $font-size-medium;
+  font-weight: $light;
+}

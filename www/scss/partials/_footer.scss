@@ -1,0 +1,48 @@
+// Footer
+// -----------------------------------------------------------------------------
+footer {
+  background-color: $primary-dark;
+  bottom: 0;
+  display: block;
+  height: $footer-height;
+  position: fixed;
+  width: 100vw;
+  z-index: $z-top;
+
+  &.no-nav {
+    background-color: $white;
+    left: 50%;
+    transform: translateX(-50%);
+    width: $desktop-width;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  li {
+    text-align: center;
+    width: 100%;
+  }
+
+  a {
+    border-top: $line rgba($black, .15);
+    color: $white;
+    display: block;
+    height: $footer-height;
+    position: relative;
+    width: 100%;
+
+    i {
+      @include vertical-center;
+    }
+  }
+
+  .active {
+    background-color: rgba($black, .25);
+  }
+
+  .nav-main {
+    background-color: $primary;
+  }
+}

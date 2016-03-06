@@ -1,0 +1,28 @@
+.mce-container.mce-panel {
+  background-color: $white;
+  border: 0;
+
+  .mce-menubar {
+    border: 0;
+
+    .mce-menubtn:hover,
+    .mce-menubtn.mce-active {
+      border-color: transparent;
+    }
+  }
+
+  &.mce-edit-area > iframe {
+    border: $line $smoke-dark;
+    border-radius: $border-radius;
+  }
+
+  &.mce-floatpanel {
+    box-shadow: $shadow-big $smoke-dark;
+
+    .mce-menu-item:hover,
+    .mce-menu-item.mce-selected,
+    .mce-menu-item:focus {
+      background-color: $primary;
+    }
+  }
+}

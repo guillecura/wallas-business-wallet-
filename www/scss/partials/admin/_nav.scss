@@ -1,0 +1,30 @@
+// Admin Navigation
+// -----------------------------------------------------------------------------
+nav {
+  background-color: $primary-dark;
+  display: block;
+  height: $adm-full-height;
+  left: 0;
+  position: fixed;
+  top: $header-height;
+  width: $nav-width;
+  z-index: $z-top - 1;
+
+  .active {
+    background-color: rgba($black, .25);
+  }
+
+  i[class*='icon-'] {
+    @extend %icon-big;
+    @include center-center;
+    color: $white;
+  }
+
+  a {
+    display: block;
+    height: $nav-width;
+    text-align: center;
+    position: relative;
+    width: 100%;
+  }
+}

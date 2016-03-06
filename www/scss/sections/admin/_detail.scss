@@ -1,0 +1,116 @@
+// Admin Users
+// -----------------------------------------------------------------------------
+.section-business-detail {
+  > article {
+    @extend %inline-block;
+    text-align: center;
+    width: 40%;
+
+    &:nth-child(odd) {
+      margin-left: 10%;
+    }
+
+    &:nth-child(even) {
+      background-color: $smoke-light;
+
+      h2 {
+        display: block;
+        margin: 0 0 $margin $margin;
+        text-align: left;
+      }
+    }
+  }
+
+  .business-info {
+    .b-image {
+      height: $avatar;
+      margin-bottom: $margin;
+      width: $avatar;
+    }
+
+    h2 {
+      margin-bottom: $margin;
+    }
+
+    span {
+      display: block;
+      margin-bottom: $margin / 2;
+
+      b {
+        font-size: $font-size-medium;
+        font-weight: $bold;
+      }
+    }
+
+    .author {
+      font-size: $font-size-small;
+      text-transform: uppercase;
+    }
+  }
+
+  .logo {
+    border-radius: 50%;
+    cursor: pointer;
+    height: $avatar;
+    margin-bottom: $margin;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: $avatar;
+
+    @media #{$mobile} {
+      height: $avatar * .66;
+      width: $avatar * .66;
+    }
+
+    &::-webkit-file-upload-button {
+      @include vertical-center;
+      appearance: none;
+      background: transparent;
+      border: 0;
+      color: $black;
+      cursor: pointer;
+      font-size: $font-size-small;
+      text-align: center;
+      white-space: normal;
+      width: $avatar;
+
+      @media #{$mobile} {
+        width: $avatar * .66;
+      }
+    }
+
+    + .basic-info {
+      padding-left: $padding;
+    }
+  }
+
+  form {
+    margin-bottom: $margin * 2;
+  }
+
+  input {
+    display: block;
+    margin-bottom: $margin;
+    width: 100%;
+  }
+
+  .admin-match-user {
+    border: $line $smoke-dark;
+    border-radius: $border-radius;
+    min-height: calc(#{$button-height} + #{$padding * 2});
+    padding: $padding;
+    position: relative;
+    text-align: left;
+
+    button {
+      bottom: $padding;
+      position: absolute;
+      right: $padding;
+    }
+  }
+
+  .admin-delete-business {
+    padding: $padding * 2 0;
+  }
+}

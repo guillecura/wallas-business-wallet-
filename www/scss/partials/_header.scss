@@ -1,0 +1,34 @@
+// Header
+// -----------------------------------------------------------------------------
+header {
+  background-color: $white;
+  border-bottom: $line $smoke-light;
+  display: block;
+  height: $header-height;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100vw;
+  z-index: $z-top;
+
+  .wallas-logo {
+    height: $header-logo-height;
+    margin-top: ($header-height - $header-logo-height) / 2;
+  }
+
+  &.no-logo {
+    border: 0;
+    left: 50%;
+    max-width: $desktop-width;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+}
+
+// Logo
+// -----------------------------------------------------------------------------
+.wallas-logo {
+  path {
+    fill: $primary-dark;
+  }
+}

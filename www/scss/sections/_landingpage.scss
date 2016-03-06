@@ -1,0 +1,126 @@
+// Landing page special styles
+// -----------------------------------------------------------------------------
+.page-landing,
+.preview-landing {
+  padding: 0;
+
+  > section {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+
+    .wallas-logo {
+      bottom: 0;
+      position: absolute;
+      transform: translateY(35%);
+
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  article {
+    text-align: center;
+  }
+
+  footer {
+    background-color: $primary-dark;
+    position: relative;
+
+    > div {
+      max-width: $article-width;
+      padding: $padding * 2 $padding * 4;
+
+      > ul,
+      > div {
+        @extend %inline-block;
+        text-align: center;
+        vertical-align: middle;
+        width: 33.33%;
+
+        .wallas-logo {
+          height: $header-logo-height;
+
+          path {
+            fill: $white;
+          }
+        }
+
+        .button {
+          background-color: transparent;
+          border: $line $white;
+          cursor: auto;
+          display: inline-block;
+          float: right;
+        }
+
+        li {
+          display: block;
+
+          a {
+            color: $white;
+            display: block;
+            font-size: $font-size-medium;
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    > span {
+      bottom: 0;
+      color: $white;
+      display: block;
+      font-size: $font-size-tiny;
+      left: 0;
+      line-height: $margin * 2;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+.page-landing {
+  > section {
+    height: 80vh;
+    width: 100vw;
+
+    .wallas-logo {
+      left: -10vw;
+      width: 120vw;
+    }
+  }
+
+  footer {
+    height: 20vh;
+    width: 100vw;
+  }
+}
+
+.preview-landing {
+  $preview: 100vh - #{$header-height};
+
+  box-shadow: $shadow-big $smoke-dark;
+  display: block;
+  max-height: calc(#{$preview});
+  max-width: calc(#{$article-width} - #{$padding * 2});
+  padding: $padding;
+
+  > section {
+    min-height: calc((#{$preview}) / 2);
+    max-height: 60%;
+    max-width: 100%;
+    padding: $padding;
+    width: 100%;
+
+    .wallas-logo {
+      left: -10%;
+      width: 120%;
+    }
+  }
+}

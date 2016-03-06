@@ -1,0 +1,42 @@
+// Type edition
+// -----------------------------------------------------------------------------
+.section-business-type {
+  > article {
+    position: relative;
+  }
+
+  form {
+    text-align: center;
+
+    button {
+      margin-top: $margin * 2;
+    }
+  }
+
+  .table,
+  .irpf {
+    display: table;
+    margin-top: $margin * 2;
+    width: 100%;
+
+    > * {
+      display: table-row;
+
+      > * {
+        display: table-cell;
+        padding: $padding / 3;
+        vertical-align: top;
+      }
+    }
+
+    > .heading * {
+      font-weight: $bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .irpf {
+    margin-left: 0;
+    width: 400px;
+  }
+}
